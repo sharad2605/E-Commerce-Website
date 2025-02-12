@@ -25,43 +25,33 @@ const Cart = () => {
         <Modal.Body>
           {/* New Heading */}
           <h2 className="cart-heading">Your Shopping Cart</h2>
-          <table>
-            <tbody>
-                <tr>
-                {cartElements.map((product, index) => (
-                <div className="cart-item" key={index}>
-                    <td>
-                    <img src={product.imageUrl} alt={product.title} />
-                    </td>
-                    <td>
-                        <div className="cart-item-details"> 
-                             <h3>{product.title}</h3>
-                        </div>
-                    </td>
 
-                    <td>
-                        <div className="cart-item-details"> 
-                             <p>Price: ${product.price}</p>
-                        </div>
-                    </td>
-                    <td>
-                        <div className="cart-item-details"> 
-                            <p>Quantity: {product.quantity}</p>
-                        </div>
-                    </td>
-                    <td>
-                    <button className="btn btn-danger">Remove</button> 
-                    </td>
-              
-            </div>
-           
-          ))}
-            </tr>
-            
-             </tbody>
+          <table className="cart-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              {cartElements.map((product, index) => (
+                <tr key={index} className="cart-item">
+                  <td>
+                    <img src={product.imageUrl} alt={product.title} className="cart-img" />
+                  </td>
+                  <td>{product.title}</td>
+                  <td>${product.price}</td>
+                  <td>{product.quantity}</td>
+                  <td>
+                    <button className="btn btn-danger">Remove</button>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
           </table>
-          
-           
         </Modal.Body>
 
         <Modal.Footer>
