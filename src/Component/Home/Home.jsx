@@ -1,8 +1,11 @@
 import { Container, Button } from 'react-bootstrap';
 import 'bootstrap-icons/font/bootstrap-icons.css';
+import Tours from '../Tours/Tours';
+import Footer from '../Footer/Footer';
 
 const Home = () => {
   return (
+    <>
     <div style={{ backgroundColor: 'gray', color: 'white', textAlign: 'center', padding: '80px 0' }}>
       <Container>
         <h1 style={{ fontSize: '90px', fontWeight: 'bold' }}>The Generics</h1>
@@ -27,6 +30,12 @@ const Home = () => {
         </div>
       </Container>
     </div>
+    <div>
+      <Tours />
+    </div>
+    </>
+    
+    
   );
 };
 

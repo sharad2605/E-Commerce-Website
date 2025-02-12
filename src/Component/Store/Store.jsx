@@ -2,6 +2,7 @@ import { Card } from "react-bootstrap";
 import { useContext } from "react";
 import { ProductContext } from "../Context/ProductContext";
 import "./Store.css";
+import Header from "../Header/Header";
 
 const Store = () => {
   const { addProduct } = useContext(ProductContext);
@@ -15,6 +16,8 @@ const Store = () => {
 
   return (
     <>
+    
+
       <div className="container">
         <h1 style={{ textAlign: "center", fontFamily: "cursive" }}>Store</h1>
         <div className="row justify-content-center">
