@@ -6,6 +6,7 @@
     margin: 0 20px;
   }
   
+  
   .nav-link:hover {
     color: lightgray !important;  /* Change color on hover */
   }
@@ -13,10 +14,11 @@
   .cart-button {
     background-color: #ffcc00;
     border: none;
-    padding: 5px 15px;
+    padding: 500px 105px;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
+    margin-left: auto;
   }
   
   .cart-button:hover {

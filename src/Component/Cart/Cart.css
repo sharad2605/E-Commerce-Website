@@ -34,3 +34,20 @@
     height: 80px;
     object-fit: cover;
 }
+
+.cart-fixed {
+    position: fixed;
+    top: 10px; /* Adjust to avoid navbar overlap */
+    right: 20px;
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.cart-button {
+    background-color: #ffcc00;
+    align-items: right;
+    border: none;
+    padding: 5px 15px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+}

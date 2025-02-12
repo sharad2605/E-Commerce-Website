@@ -18,7 +18,10 @@ const Header = () => {
           <Nav.Link href="#about" className="nav-link">
             ABOUT
           </Nav.Link>
-          <Cart/>
+          
+            <Cart />
+          
+          
         </Nav>
         <Navbar.Collapse />
       </Container>
