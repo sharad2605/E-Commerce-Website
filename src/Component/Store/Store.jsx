@@ -15,11 +15,10 @@ const Store = () => {
   ];
 
   return (
-    <>
+    <>  
     
-
       <div className="container">
-        <h1 style={{ textAlign: "center", fontFamily: "cursive" }}>Store</h1>
+        <h1 style={{ textAlign: "center", fontFamily: "cursive" ,marginTop:'50px'}}>Store</h1>
         <div className="row justify-content-center">
           {productsArr.map((product, index) => (
             <div className="col-md-6 d-flex justify-content-center" key={index}>
