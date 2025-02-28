@@ -7,6 +7,7 @@ import Footer from "./Component/Footer/Footer";
 import { ProductProvider } from "./Component/Context/ProductContext";
 import About from "./Component/About/About";
 import ContactUs from "./Component/ContactUs/ContactUs";
+import ProductDetails from "./Component/Store/ProductDetails";
 
 const router = createBrowserRouter([
   {  path: "/", element: <Home /> },
@@ -14,7 +15,8 @@ const router = createBrowserRouter([
   {  path: "/store", element: <Store /> },
   {  path: "/about", element: <About /> },
   {  path: "/cart", element: <Cart /> },
-  {  path: "/ContactUs", element: <ContactUs /> },
+  {  path: "/ContactUs", element: <ContactUs />},
+  { path: "/product/:title", element: <ProductDetails />},
 ]);
 function App() {
   return (

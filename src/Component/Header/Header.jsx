@@ -21,7 +21,6 @@ const Header = () => {
           <Nav.Link href="/ContactUs" className="nav-link">
             CONTACT US
           </Nav.Link>
-          
             <Cart />
           
           

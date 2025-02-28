@@ -2,7 +2,8 @@ import { Card } from "react-bootstrap";
 import { useContext } from "react";
 import { ProductContext } from "../Context/ProductContext";
 import "./Store.css";
-import Header from "../Header/Header";
+import { Link } from "react-router-dom";
+
 
 const Store = () => {
   const { addProduct } = useContext(ProductContext);
@@ -25,7 +26,11 @@ const Store = () => {
               <Card className="product-card">
                 <Card.Img variant="top" src={product.imageUrl} />
                 <Card.Body>
-                  <Card.Title>{product.title}</Card.Title>
+                  <Card.Title>
+                    <Link to={`/product/${product.title}`} className="product-link">
+                    {product.title}
+                  </Link>
+                  </Card.Title>
                   <Card.Text>${product.price}</Card.Text>
                   <button onClick={() => addProduct(product)} className="btn btn-primary">
                     Add to Cart
