@@ -31,7 +31,7 @@ const ProductDetails = () => {
     },
     {
         title: "Yellow and Black Colors",
-        price: 100,
+        price: 70,
         images: [
           "https://prasadyash2411.github.io/ecom-website/img/Album%201.png",
           "https://prasadyash2411.github.io/ecom-website/img/Album%202.png",
