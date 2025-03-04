@@ -13,17 +13,20 @@ export const  AuthContextProvider = (props) => {
     const storedToken = localStorage.getItem('token');
     const [token, setToken] = useState(storedToken);
 
+    
+
     const userIsLoggedIn = !!token;
 
     const loginHandler = (token) => { 
         setToken(token);
         localStorage.setItem('token', token);
         
-    };  
+    }; 
 
-    const logoutHandler = () => {    
+    const logoutHandler = (navigate) => {    
         setToken(null);
         localStorage.removeItem('token');
+        navigate('/login');
        
     };  
 
