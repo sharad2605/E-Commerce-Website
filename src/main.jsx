@@ -6,12 +6,14 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
 import { AuthContextProvider } from './store/auth-context.jsx';
 import { BrowserRouter } from 'react-router-dom';
+import { ProductProvider } from './Component/Context/ProductContext.jsx';
 
 
 createRoot(document.getElementById('root')).render(
-  <AuthContextProvider>
-    
+  <ProductProvider>
+    <AuthContextProvider>
       <App />
-    
-  </AuthContextProvider>,
+  </AuthContextProvider>
+  </ProductProvider>
+  ,
 )

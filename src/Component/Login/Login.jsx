@@ -41,7 +41,7 @@ const Login = () => {
         throw new Error(data.error?.message || "Authentication failed!");
       }
 
-      authCtx.login(data.idToken); // Store token in context
+      authCtx.login(data.idToken,email); // Store token in context
       navigate("/store", { replace: true }); // Redirect after login
     } catch (err) {
       setError(err.message);

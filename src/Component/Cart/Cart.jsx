@@ -2,21 +2,25 @@ import { useContext, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import { ProductContext } from "../Context/ProductContext";
 import "./Cart.css";
+import AuthContext from "../../store/auth-context";
 
 const Cart = () => {
+
+  const authCtx = useContext(AuthContext);
   const { cart, removeProduct } = useContext(ProductContext);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const totalItem = cart.reduce((total, item) => total + item.quantity, 0);
 
   return (
     <>
-      <div className="cart-fixed">
+      {authCtx.isLoggedIn && <div className="cart-fixed">
         <button className="cart-button" onClick={handleShow}>
-          Cart ({cart.reduce((total, item) => total + item.quantity, 0)})
+          Cart ({totalItem})
         </button>
-      </div>
+      </div>}
 
       <Modal show={show} onHide={handleClose} size="lg" aria-labelledby="example-modal-sizes-title-lg">
         <Modal.Header closeButton>
@@ -48,7 +52,7 @@ const Cart = () => {
                     <td>${product.price}</td>
                     <td>{product.quantity}</td>
                     <td>
-                      <button className="btn btn-danger" onClick={() => removeProduct(product.title)}>
+                      <button className="btn btn-danger" onClick={() => removeProduct(product._id)}>
                         Remove
                       </button>
                     </td>

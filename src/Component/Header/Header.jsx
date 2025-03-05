@@ -10,14 +10,14 @@ const Header = () => {
    const authCtx = useContext(AuthContext);
    const navigate = useNavigate();
    const logoutHandler = () => {
-    authCtx.logout(navigate);  // ✅ Pass `navigate` to logout function
+    authCtx.logout(navigate);  
   };
 
 
 
   return (
     <Navbar expand="lg" style={{ backgroundColor: "black" }} fixed="top"  variant="dark">
-      <Container className="justify-content-center">
+      <Container className="">
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav"></Navbar.Collapse>
         <Nav className="mx-auto">
